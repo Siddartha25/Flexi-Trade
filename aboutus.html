@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>About Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    </head>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Playfair Display', serif;
+    display: grid;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #004e6d 0%, #236680 46%, #589eba 100%);
+
+    align-content: center;
+    min-height: 100vh;
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 70vh;
+    width: 75vw;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 12px
+}
+.image{
+    background-color: #12192c;
+    display: flex;
+    border-radius: 12px 0 0 12px;
+}
+.image img{
+height:50vh;
+margin:50px auto
+}
+.content{
+    background-color: #228cb6;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0  12px 12px 0;
+    color: #fff;
+}
+.content h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+}
+.content span{
+    height: 0.5px;
+    width: 80px;
+    background: #777;
+    margin: 30px 0;
+}
+.content p{
+    padding-bottom: 15px;
+    font-weight: 300;
+    opacity: 0.7;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7;
+    color:#ffffff
+}
+.links{
+    margin: 15px 0;
+}
+.links li{
+    border: 2px solid #4158D0;
+    list-style: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 160px;
+    text-align: center;
+}
+.links li a{
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+.links li:hover{
+    border-color: #C850C0;
+}
+
+.vertical-line{
+    height: 30px;
+    width: 3px;
+    background: #C850C0;
+    margin: 0 auto;
+}
+.icons{
+    display: flex;
+    padding: 15px 0;
+}
+.icons li{
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}
+.icons li i{
+    font-size: 26px;
+    opacity: 0.8;
+}
+.icons li i:hover{
+    color: #C850C0;
+    cursor: pointer;
+}
+
+
+/*****************/
+
+@media(max-width: 900px){
+    section{
+        grid-template-columns: 1fr;
+        width: 100%;
+        border-radius: none;
+    }
+    .image{
+        height: 100vh;
+        border-radius: none;
+    }
+    .content{
+        height: 100vh;
+        border-radius: none;
+    }
+    .content h2{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .content span{
+        margin: 20px 0;
+    }
+    .content p{
+        font-size: 14px;
+        width: 90%;
+    }
+    .links li a{
+        font-size: 14px;
+    }
+    .links{
+        margin: 5px 0;
+    }
+    .links li{
+        padding: 6px 10px;
+    }
+    .icons li i{
+        font-size: 15px;
+    }
+}
+.credit{
+    text-align: center;
+    color: #000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .credit a{
+    text-decoration: none;
+    color:#000;
+    font-weight: bold;
+  } 
+  section{
+    position: relative;
+    height: 500px;
+    border-radius: 12px;
+    padding: 10px;
+  }
+  /*.image{
+    position: relative;
+    background-color: red;
+    width: 200px;
+    left: 0px;
+  }*/
+  .content{
+    position: relative;
+    width: 155vh;
+    border-radius: 12px;
+    left: 13%;
+    padding: 20px;
+    top: 25px;
+  }
+  h2{
+    font-size: 30px;
+    font-weight: 30px;
+  }
+  .info{
+    width: 700px;
+    font-size: 18px;
+  }
+  .menubutton {
+    color: #ecf0f1;
+    font-size: 17px;
+    background-color: #0078a8;
+    border: 1px solid #0078a8;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 6px 0px #015373;
+    transition: all .1s;
+    margin-right: 10px;
+    
+   }
+   
+   .menubutton:active {
+    box-shadow: 0px 2px 0px #015373;
+    position: relative;
+    top: 2px;
+   }
+   a{
+    text-decoration: none;
+   }
+  /*
+  p{
+    color: #000;
+  }
+  a{
+    color: black;
+  }*/
+  
+
+
+    </style>
+    <body>
+        <!-- <section> -->
+            <!-- <div class = "image">
+               <img src="https://cdn.pixabay.com/photo/2017/08/26/23/37/business-2684758__340.png">
+            </div> -->
+
+            <div class = "content">
+                <h2>About Us</h2>
+                <span><!-- line here --></span>
+                <p>
+                    <h1> FlexiTrade - Your Role Your Choice.</h1>
+                    <br>
+                    <div class="info">
+                    At FlexiTrade, we believe in the power of connection and the limitless possibilities it holds. Our platform is designed to bring together sellers, buyers, and delivery drivers, creating a seamless ecosystem where everyone can thrive.
+                    </div>
+                    <br>
+                    <h3>Our Story</h3>             
+                    <br>
+                    <div class="info">
+                    It all started with a vision to revolutionize the way people buy and sell goods. We recognized the need for a platform that not only connects buyers and sellers but also ensures efficient and reliable delivery.
+                    </div>
+                    <br>
+                    <h3>Our Mission</h3>   
+                    <br>
+                    <div class="info">
+                    Our mission is simple yet ambitious: to empower individuals by providing them with the tools and opportunities to become sellers, buyers, and delivery drivers, all within a single platform.
+                     We believe that everyone should have the chance to explore their entrepreneurial spirit, find great deals, and contribute to the seamless movement of goods.
+                    </div>
+                     <br>
+                    <h3>How It Works</h3>               
+                     <br>
+                     <div class="info">
+                    Our platform is designed to be user-friendly, ensuring that anyone can navigate and utilize its features with ease. Whether you're a seller looking to showcase your products, a buyer in search of unique finds, or a delivery driver seeking flexible earning opportunities, we've got you covered.
+                    </div>
+                    <br>
+                    <h3>Seller</h3>       
+                    <br>
+                    <div class="info">
+                    As a seller, you need to first get yourself registered as a seller after which our team will get in touch with you and verify you as a seller for you to begin selling products. 
+                    </div>
+                    <br>
+                    <h3>Buyer</h3>        
+                    <br>
+                    <div class="info">
+                    For buyers, our platform offers a diverse marketplace filled with a wide range of products from various sellers. Discover new items, explore different categories, and make purchases with just a few clicks.
+                    You can track your order real time as it is being delivered to you by the person who took up the role of delivery driver.
+                    </div>
+                    <br>
+                    <h3>Delivery Drivers</h3>                   
+                    <br>
+                    <div class="info">
+                    As a delivery driver we offer a flexible and rewarding way to earn income. 
+                    For delivering an order, initially create a delivery driver profile and request for the deliveries that are available to deliver based on your comfort, 
+                    once you are assigned a delivery just pickup the order from our warehouse and deliver it to the customer location. YES its that simple.
+                    </div>
+                    <br>
+                    <h3>Why Choose Us</h3>                 
+                    <br>
+                    <div class="info">
+                    At FlexiTrade, we take pride in fostering a vibrant and inclusive community. We prioritize trust, transparency, and reliability, ensuring that each transaction and interaction on our platform is conducted with integrity. Our dedicated support team is always ready to assist you, ensuring a smooth and enjoyable experience for everyone involved.
+                    
+                    Join us on this exciting journey of connection and empowerment. Explore new opportunities, discover unique products, and be a part of a dynamic community that believes in the power of collaboration. Together, let's reshape the way we buy, sell, and deliver goods.
+                    </div>
+                    <br>
+                  </p>
+                <!-- <ul class = "links">
+                    <li><a href = "#">work</a></li>
+                    <div class = "vertical-line"></div>
+                    <li><a href = "#">service</a></li>
+                    <div class = "vertical-line"></div>
+                    <li><a href = "#">contact</a></li>
+                </ul> -->
+                <a href="/home" class="menubutton" id="anchor">HOME</a>
+                <ul class = "icons">
+                    <li>
+                        <i class = "fa fa-twitter"></i>
+                    </li>
+                    <li>
+                        <i class = "fa fa-facebook"></i>
+                    </li>
+                    <!-- <li>
+                        <i class = "fa fa-github"></i>
+                    </li>
+                    <li>
+                        <i class = "fa fa-pinterest"></i>
+                    </li> -->
+                </ul>
+            </div>
+        <!-- </section> -->
+        <br><br>
+        <!-- <div class="credit">Made with <span style="color:tomato">❤</span> by <a href="https://www.learningrobo.com/">Learning Robo</a></div>
+     -->
+    </body>
+</html>

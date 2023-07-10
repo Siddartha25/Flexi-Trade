@@ -1,0 +1,304 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+</head>
+
+<style>
+
+    #part1::before{
+        content:"";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 500px;
+        background: url('https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80') no-repeat center center/cover; 
+        z-index: -1;
+        opacity: 0.5;
+    }
+    #part1{
+        position: absolute;
+        height: 500px;
+        z-index: 1;
+        top:0px;
+        left:0px;
+        width: 100%;
+    }
+
+    #part2{
+        
+        position:absolute;
+        top: 500px;
+        z-index: 1;
+        height:600px;
+        background-color: #0078a8;
+        left:0px;
+        width: 100%;
+    }
+
+    #part3{
+        position: absolute;
+        top: 1100px;
+        height:100px;
+        background-color: bisque;
+        left:0px;
+        width: 100%;
+        
+    }
+
+    .homediv{
+        width: 100%;
+        left:0px;
+        width: 100%;
+    }
+    .menubutton {
+        color: #ecf0f1;
+        font-size: 17px;
+        background-color: #0078a8;
+        border: 1px solid #0078a8;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0px 6px 0px #015373;
+        transition: all .1s;
+        margin-right: 10px;
+        
+       }
+       
+       .menubutton:active {
+        box-shadow: 0px 2px 0px #015373;
+        position: relative;
+        top: 2px;
+       }
+     /*here*/
+    #menu_ul{ 
+        position: absolute;
+        top: 0px;
+        display: flex;
+        left:0px;
+        width: 80%;
+        align-items: center;
+        justify-content: left;
+    }
+
+    #menubar::before{
+        content:"";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: black; 
+        z-index: -1;
+        opacity: 0.7;
+        
+    }
+    #menubar{
+        
+        position: absolute;
+        z-index: 1;
+        height:75px;
+        top:0px;
+        left:0px;
+        width: 100%;
+    }
+
+    #home{
+        position: relative;
+        top: 20%;
+        
+    }
+    #welcome{
+        font-family: 'PT Serif', serif;
+        text-align: center;
+        font-size: 70px;
+        font-weight: 1000;
+        
+    }
+    #intro{
+        text-align: center;
+        font-size: 40px;
+        font-weight: 40px;
+        font-weight: 'PT Serif', serif;
+        
+    }
+
+    #options{
+        position: relative;
+        top: 25%;
+        height:250px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .choice{
+        border: 2px solid red;
+        height: 300px;
+        width: 300px;
+        box-shadow: 1px 1px 10px 12px rgba(0, 0, 0, 0.2);
+         text-align: center;
+         border-radius: 20px;
+    }
+    .optionbutton{
+  
+        background-color: black;
+        border-radius: 4em;
+        font-size: 16px;
+        color: white;
+        padding: 0.8em 1.8em;
+        cursor:pointer;
+        position: relative;
+        top: 96%;
+        z-index: 6;
+        text-decoration: none;
+        
+    }
+    #contact{
+        position: relative;
+        top: 18px;
+        text-align: center;
+        font-size: 25px;
+        
+    }
+   /*#choice1::before{
+        content:"";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: url('https://source.unsplash.com/collection/190727') no-repeat center center/cover;
+        background-size: 250px 250px;
+        z-index: 5;
+    }*/
+    /*#choice2::before{
+        content:"";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: url('https://source.unsplash.com/collection/190727') no-repeat center center/cover;
+        background-size: 250px 250px;
+        z-index: 5;
+    }*/
+    /*#choice3::after{
+        content:"";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: url('https://source.unsplash.com/collection/190727') no-repeat center center/cover;
+        background-size: 250px 250px;
+        z-index: 5;
+    }*/
+
+    #choice1{
+        background: url('https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80') no-repeat center center/cover;
+        /*background-size: 300px 300px;*/
+        transition: all 0.1s ease-in-out 0.1s;  
+    }
+    #choice2{
+        background: url('https://images.unsplash.com/photo-1620911166596-8cee7978b302?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=439&q=80') no-repeat center center/cover;
+        /*background-size: 300px 300px;*/
+        transition: all 0.1s ease-in-out 0.1s;
+    }
+    #choice3{
+        background: url('https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2015&q=80') no-repeat center center/cover;
+        /*background-size: 300px 300px;*/
+        transition: all 0.1s ease-in-out 0.1s;
+    }
+
+    #choice1:hover{
+        height: 330px;
+        width: 330px;
+        /*background-size: 330px 330px;*/
+    }
+    #choice2:hover{
+        height: 330px;
+        width: 330px;
+        /*background-size: 330px 330px;*/
+    }
+    #choice3:hover{
+        height: 330px;
+        width: 330px;
+        /*background-size: 330px 330px;*/
+    }
+    /*here*/
+    #quote{
+        position: relative;
+        left: 30%;
+        top: 40%;
+        font-size: 40px;
+        width: 1000px;
+    }
+    #anchor{
+        text-decoration: none;
+    }
+
+</style>
+
+<body>
+    <section id="part1" class="homediv">
+        <div id="menubar">
+            <ul id="menu_ul">
+                <button class="menubutton">HOME</button>
+                <button class="menubutton" onclick="godown()">CONTACT US</button>
+                <a href="/aboutus" class="menubutton" id="anchor">ABOUT US</a>
+                <a href="/myprofile" class="menubutton" id="anchor">MY PROFILE</a>
+                <a href="/" class="menubutton" id="anchor">LOG OUT</a> 
+            </ul>
+        </div>
+
+        <div id="home">
+            <div id="info">
+                <h1 id="welcome">
+                    FlexiTrade
+                </h1>
+                <p id="intro">
+                    Empowering Connections, Empowering You: Uniting Sellers, Buyers, and Drivers!
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="part2" class="homediv">
+
+        <div id="options">
+            <div class="choice" id="choice1">   
+                <a href="/buy" class="optionbutton"> BUY</a>
+            </div>
+            <div class="choice" id="choice2">
+                <a href="/sell" class="optionbutton"> SELL</a>
+            </div>
+            <div class="choice" id="choice3">
+                <a href="/delivery" class="optionbutton"> DELIVER</a>
+                <!-- <button class="optionbutton" onclick="gotodeliver">DELIVER</button> -->
+            </div>
+        </div>
+        <h1 id="quote">"YOUR ROLE YOUR CHOICE"</h1>
+
+    </section>
+
+
+
+    <section id="part3" class="homediv">
+        <div id="contact">
+            <p>EMAIL: sg21csb0f25@student.nitw.ac.in | PH: 123456789 | FAX: 12345678 | PO: 1-2-312 Delhi</p>
+        </div>
+    </section>
+</body>
+
+<script>
+    function godown(){
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+</script>
+
+</html>

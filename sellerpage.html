@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Yourself</title>
+</head>
+
+<style>
+    body {
+        align-items: center;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .form1 {
+        position:absolute;
+        top:40px;
+        background-color: #15172b;
+        border-radius: 20px;
+        height: 650px;
+        padding: 20px;
+        width: 600px;
+    }
+
+    .title {
+        text-align: center;
+        color: #eee;
+        font-family: sans-serif;
+        font-size: 45px;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #eee;
+        font-family: sans-serif;
+        font-size: 25px;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+
+    .input-container {
+        height: 50px;
+        position: relative;
+        width: 100%;
+    }
+
+    .ic1 {
+        margin-top: 40px;
+    }
+
+    .ic2 {
+        margin-top: 30px;
+    }
+
+    .input {
+        background-color: #303245;
+        border-radius: 12px;
+        border: 0;
+        box-sizing: border-box;
+        color: #eee;
+        font-size: 18px;
+        height: 100%;
+        outline: 0;
+        padding: 4px 20px 0;
+        width: 100%;
+    }
+    .submit {
+        position: relative;
+        bottom: 250px;
+        background-color: #08d;
+        border-radius: 12px;
+        border: 0;
+        box-sizing: border-box;
+        color: #eee;
+        cursor: pointer;
+        font-size: 18px;
+        height: 50px;
+        margin-top: 38px;
+        outline: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .submit:active {
+        background-color: #06b;
+    }
+</style>
+
+<body>
+    <div class="form1">
+        <div class="title">Register yourself as a Seller</div>
+        
+        <!-- <div class="subtitle">Register yourself as a Seller</div> -->
+        <form action="/sell" method="post">
+
+            <div class="input-container ic2">
+                <input name="firstname" class="input" type="text" placeholder="First Name" required autocomplete="off" />
+            </div>
+
+            <div class="input-container ic2">
+                <input name="lastname" class="input" type="text" placeholder="Last Name" required autocomplete="off" />
+            </div>
+
+            <div class="input-container ic2">
+                <input name="age" class="input" type="number" placeholder="Age" required autocomplete="off" />
+            </div>
+            <div class="input-container ic2">
+                <input name="email" class="input" type="email" placeholder="Email" required autocomplete="off" />
+            </div>
+            <div class="input-container ic2">
+                <input name="address" class="input" type="text" placeholder="Pickup Address" required autocomplete="off" />
+            </div>
+            <!-- <div class="input-container ic2">
+                <input name="itemname" class="input" type="text" placeholder="Name of the item" required autocomplete="off"/>
+            </div>
+            <div class="input-container ic2">
+                <input name="cost" class="input" type="number" placeholder="Cost" required autocomplete="off" />
+            </div> -->
+            <div class="input-container ic2">
+                <input name="date" class="input" type="string" placeholder="Todays Date" id="date" readonly required autocomplete="off"
+                style="display: none;" />
+            </div>
+            <div class="input-container ic2">
+                <input name="Userid" class="input" type="text" id="userid" placeholder="User ID" autocomplete="off" style="display: none;"/>
+            </div>
+            <div class="input-container ic2">
+                <input name="Phone_no" class="input" type="tel" id="phone_no" placeholder="Phone Number" autocomplete="off" pattern="[0-9]{10}" style="display: none;"/>
+            </div>
+            <button type="text"  class="submit" id="btn">Submit</button>
+        </form>
+    </div>
+</body>
+<!-- 
+<script type="module">
+    import {loginid,phone} from "./mainlogic.js";
+    const x=document.getElementById("userid");
+    const y=document.getElementById("phone_no");
+    x.value=loginid;
+    y.value=phone;
+</script> -->
+
+<script>
+    var d=new Date();
+    document.getElementById("date").value=d;
+    //console.log(d);
+</script>
+
+</html>
+
+

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+</head>
+
+<style>
+    #menubar{
+        background-color: black;
+        position: absolute;
+        height:65px;
+        top:0px;
+        left:0px;
+        width: 100%;
+    }
+    .menuanchor:hover{
+        background-color: red;
+        border-radius: 10px;
+        height: 25px;
+        box-shadow:inset,10,10,4px,black;
+        padding: 2px;
+    }
+    .menuanchor{
+        margin-right: 10px;
+        margin-top: auto;
+        margin-bottom: auto;
+        height :50px;
+        top: 0px;
+        background-color: black;
+        font-size: 25px;
+        text-decoration: none;
+        color: white;
+        margin-top: 10px;
+    }
+    #part2::before{
+        content:"";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: url('https://images.unsplash.com/photo-1505022610485-0249ba5b3675?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+        opacity: 0.4;
+        z-index: 1;
+    }
+    #part2{
+        position: absolute;
+        top: 65px;
+        left: 0px;
+        width: 100%;
+        height: 460px;
+        background-color: peachpuff;
+        z-index: 2;
+    }
+
+    
+h1 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: "Georgia", sans-serif;
+    font-weight: 300;
+    font-size: 60px;
+    color: #080808;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+  }
+  
+  h1 span {
+    display: block;
+    font-size: 0.5em;
+    line-height: 1.3;
+  }
+  h1 em {
+    font-style: normal;
+    font-weight: 600;
+  }
+  
+  /* === HEADING STYLE #1 === */
+  .one h1 {
+
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+  }
+  .one h1:before {
+    width: 28px;
+    height: 5px;
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    margin-left: -14px;
+    background-color: #b80000;
+  }
+  .one h1:after {
+    width: 100px;
+    height: 1px;
+    display: block;
+    content: "";
+    position: relative;
+    margin-top: 25px;
+    left: 50%;
+    margin-left: -50px;
+    background-color: #b80000;
+  }
+  #into{
+    position: relative;
+    top:35%;
+    z-index: 3;
+  }
+  #part3{
+    position: absolute;
+    top: 525px;
+    left: 0px;
+    width: 100%;
+    height: 550px;
+    background-color: #b80000;
+  }
+  #options{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 97%;
+    height: 92%;
+    
+    display:grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(4,1fr);
+    z-index: 1;
+
+  }
+  .choice{
+    margin: 20px;
+    background-color: blue;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Georgia", sans-serif;
+    border: 4px solid white;
+    border-radius: 20px;
+  }
+  .optionbutton{
+    background-color: black;
+    border-radius: 4em;
+    font-size: 16px;
+    color: white;
+    padding: 0.8em 1.8em;
+    cursor:pointer;
+    position: relative;
+    top: 90%;
+    z-index: 6;
+}
+
+#choice1{
+    background: url('https://images.unsplash.com/photo-1515555230216-82228b88ea98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1926&q=80') no-repeat center center/cover;
+}
+#choice2{
+    background: url('https://images.unsplash.com/photo-1518894781321-630e638d0742?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80') no-repeat center center/cover;
+}
+#choice3{
+    background: url('https://images.unsplash.com/photo-1545921095-3e9b7ae8d85f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1123&q=80') no-repeat center center/cover;
+}
+#choice4{
+    background: url('https://images.unsplash.com/photo-1660593212134-52f2ac133a1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
+}
+#choice5{
+    background: url('https://images.unsplash.com/photo-1574809736435-dced6ecf6ce7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80') no-repeat center center/cover;
+}
+#choice6{
+    background: url('https://plus.unsplash.com/premium_photo-1674677530230-e3ca6f8ea2d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=453&q=80') no-repeat center center/cover;
+}
+#choice7{
+    background: url('https://images.unsplash.com/photo-1511405946472-a37e3b5ccd47?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80') no-repeat center center/cover;
+}
+#choice8{
+    background: url('https://images.unsplash.com/photo-1608461864721-b8f50c91c147?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80') no-repeat center center/cover;
+}
+
+#popup{
+    position: absolute;
+    top:50%;
+    height: 550px;
+    width: 800px;
+    left:25%;
+    z-index: 5;
+    background-color: white;
+    box-shadow: 1px 1px 10px 12px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+#pic{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 270px;
+    width: 800px;
+    background-color: blue;
+}
+
+#data{
+    position: absolute;
+    top: 270px;
+    left: 0px;
+    height: 200px;
+    width: 800px;
+    background-color:white;
+}
+#close{
+    position: relative;
+    left: 97%;
+}
+#buy{
+    position: relative;
+    top: 0px;
+   left: 40%;
+    text-decoration: none;
+}
+#info{
+    position: relative;
+    font-family: "Georgia", sans-serif;
+    font-size: 30px;
+}
+/*#pic{
+    background: url('https://images.unsplash.com/photo-1515555230216-82228b88ea98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1926&q=80') no-repeat center center/cover;
+}*/
+
+
+
+</style>
+<body>
+    <div id="menubar">
+            <ul id="menu_ul">
+                <a href="/home" class="menuanchor"> HOME</a>
+            </ul>
+    </div>
+
+
+    <div id="part2" class="one">
+        <h1 id="into">New Arrivals</h1>
+    </div>
+
+    <div id="popup">
+        <div id="pic">
+            <button id="close" onclick="closeinfo()">X</button>
+        </div>
+        <div id="data">
+            <p id="info"></p>
+            <a href="/buynow" class="optionbutton" id="buy">BUY NOW</a>
+        </div>
+    </div>
+
+
+    <div id="part3">
+            <div id="options">
+                <div class="choice" id="choice1">   
+                    <button class="optionbutton" id="item1" onclick="showitem1()">Nike Air 2</button>
+                </div>
+                <div class="choice" id="choice2">
+                    <button class="optionbutton" id="item2" onclick="showitem2()">Addidas </button>
+                </div>
+                <div class="choice" id="choice3">
+                    <button class="optionbutton" id="item3" onclick="showitem3()">Supreme Tshirt</button>
+                </div>
+                <div class="choice" id="choice4">
+                    <button class="optionbutton" id="item4" onclick="showitem4()">Rayban Sunglasses</button>
+                </div>
+                <div class="choice" id="choice5">
+                    <button class="optionbutton" id="item5" onclick="showitem5()">Denim Jeans</button>
+                </div>
+                <div class="choice" id="choice6">
+                    <button class="optionbutton" id="item6" onclick="showitem6()">Bracelet</button>
+                </div>
+                <div class="choice" id="choice7">
+                    <button class="optionbutton" id="item7" onclick="showitem7()">Gucci Bag</button>
+                </div>
+                <div class="choice" id="choice8">
+                    <button class="optionbutton" id="item8" onclick="showitem8()">Guicci Belt</button>
+                </div>
+
+            </div>
+
+            <!-- <button class="item" id="item1">Nike Air2</button>
+            <button class="item" id="item2">Addidas </button>
+            <button class="item" id="item3">Supreme Tshirt</button>
+            <button class="item" id="item4">Rayban Sunglasses</button>
+            <button class="item" id="item5">Denim Jeans</button>
+            <button class="item" id="item6">Bracelet</button>
+            <button class="item" id="item7">Gucci Bag</button>
+            <button class="item" id="item8">Guicci Tshirt</button> -->
+    </div>
+</body>
+
+<!-- <script src='./buypagelogic.js'></script> -->
+<script>
+    var item;
+    
+const popup=document.getElementById("popup");
+const picture=document.getElementById("pic");
+const data=document.getElementById("info");
+
+function showitem1(){
+    item="Nike Air2";
+    picture.style.background="url('https://images.unsplash.com/photo-1515555230216-82228b88ea98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1926&q=80') no-repeat center center/cover";
+    data.innerHTML="COST:$100<br />Product Desc:Nike generally uses high-quality materials to make their Air Max lineage.\n"+"They use durable materials that could add to the longevity of the sneakers<br />Cash on Delivery";
+    popup.style.display='block';
+}
+function showitem2(){
+    item="Addidas Shoe";
+    picture.style.background="url('https://images.unsplash.com/photo-1518894781321-630e638d0742?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80') no-repeat center center/cover";
+    data.innerHTML="COST:$150<br />Product Desc:Adidas is a German multinational corporation, founded and headquartered in Herzogenaurach\n"+"that designs and manufactures shoes, clothing and accessories.\n<br />Cash on Delivery";
+    popup.style.display='block';
+}
+function showitem3(){
+    item="supreme t-shirt";
+    picture.style.background= "url('https://images.unsplash.com/photo-1545921095-3e9b7ae8d85f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1123&q=80') no-repeat center center/cover";
+    data.innerHTML="COST:$250<br />Product Desc:Supreme is an American clothing and skateboarding lifestyle brand established in New York City in April 1994.\n<br />Cash on Delivery";
+    popup.style.display='block';
+}
+function showitem4(){
+    item="Rayban Sunglasses";
+    picture.style.background="url('https://images.unsplash.com/photo-1660593212134-52f2ac133a1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover";
+    data.innerHTML="COST:$50<br />Product Desc:Ray-Ban is an American-Italian brand of luxury sunglasses and eyeglasses created in 1936 by Bausch & Lomb.\n"+"The brand is known for its Aviator lines of sunglasses.<br />Cash on Delivery";    
+    popup.style.display='block';
+}
+function showitem5(){
+    item="Denim Jeans";
+    picture.style.background="url('https://images.unsplash.com/photo-1574809736435-dced6ecf6ce7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80') no-repeat center center/cover";
+    data.innerHTML="COST:$30<br />Product Desc:Denim is a sturdy cotton twill fabric woven with an indigo, gray, or mottled white yarn.\n"+"Denim is perhaps one of the most well-known and commonly worn fabrics.<br />Cash on Delivery";  
+    popup.style.display='block';
+    
+}
+function showitem6(){
+    item="Silver Bracelet";
+    picture.style.background= "url('https://plus.unsplash.com/premium_photo-1674677530230-e3ca6f8ea2d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=453&q=80') no-repeat center center/cover";
+    data.innerHTML="COST:$60<br />Product Desc: A statement piece for bold and fashionable men\n"+"This silver bracelet is ideal for everyday office wear. Made with 925 Sterling Silver.<br />Cash on Delivery";  
+    popup.style.display='block';
+}
+function showitem7(){
+    item="Gucci Bag";
+    picture.style.background="url('https://images.unsplash.com/photo-1511405946472-a37e3b5ccd47?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80') no-repeat center center/cover";
+    data.innerHTML="COST:$300<br />Product Desc: Gucci is an Italian luxury brand of fashion, clothing and leather goods and one of the current highest-selling Italian brands.\n"+" Gucci was founded by Guccio Gucci in Florence, Tuscany, in 1921.<br />Cash on Delivery\n";  
+    popup.style.display='block';
+}
+function showitem8(){
+    item="Guicci Belt";
+    picture.style.background="url('https://images.unsplash.com/photo-1608461864721-b8f50c91c147?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80') no-repeat center center/cover";
+    data.innerHTML="COST:$150<br />Product Desc: Gucci is an Italian luxury brand of fashion, clothing and leather goods and one of the current highest-selling Italian brands.\n"+" Gucci was founded by Guccio Gucci in Florence, Tuscany, in 1921.<br />Cash on Delivery\n";  
+    popup.style.display='block';
+}
+function closeinfo(){
+    console.log("closed");
+    popup.style.display='none';
+}
+
+</script>
+
+</html>
