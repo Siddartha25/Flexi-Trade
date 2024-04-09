@@ -19,7 +19,7 @@ const { Console } = require("console");
 
 //const URL=process.env.MONGO_URI;
 //console.log(URL);
-mongoose.connect('mongodb+srv://Siddartha:JmYcfrpYIOm4YOBP@clustersid.jmxh0db.mongodb.net/warehouse', {useNewUrlParser: true,useUnifiedTopology:true});
+mongoose.connect('', {useNewUrlParser: true,useUnifiedTopology:true});
 
 //we are accessing the warehouse database from our account which has many databases
 
